@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-26-006固定定位和静态定位.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			/*margin: 30px auto;*/
+			background-color: red;
+		}
+		.son{
+			position: fixed;
+			left: 50%;
+			margin-left: -50px;			
+			/*top: 50%
+			right: 50%;
+			margin-top: -50px;
+			margin-right: 50px;*/
+			/*top: 20px
+			right: 20px;*/
+			/*bottom: 50%;
+			right: 50%;
+			margin-bottom: -50px;
+			margin-right: -50px; */
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+		body{
+			height: 2000px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+
+</body>
+</html>

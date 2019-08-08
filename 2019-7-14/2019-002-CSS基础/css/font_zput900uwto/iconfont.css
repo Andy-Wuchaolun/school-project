@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1564557398149'); /* IE9 */
+  src: url('iconfont.eot?t=1564557398149#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAREAAsAAAAACIwAAAP1AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqEdIQcATYCJAMMCwgABCAFhG0HNxtjB8gucJwnLdCA0FmX+DYoLoMQDtEIvtZ6+83M7icIIGsuD0jlmVWcYpYnTMIyMnWDcpq0HWReMl7wLbl90Asfv597N7Hu6TZU4hIikr/c1yf7YhlCJ2smkkid1KaDQymEAUGQp/hAHnD5xwH4P4eLW15g81ttl7VpjaFRL8A4oIDGXsCBFGUH5PeAXU1gPYF2oxmCK44uHlhDoXULxFHX1lgjplJKskOrUOeMLeIeqLSm64gPuOt+P36bH60kVab1Xbn/0GQ73+zudfnc/7baGnC+PwOYSWTMBBRie65po7IfmgmpXZJXypNrRUh9eadTXL6srGf6j5eImibvRMxUWdopgUkh+Paahwr7/ys12vGMGN7DQyjqqW1t47u6utvbp5+k7hO5Hyjz2E3bMD49tSaJ9lYaR7vnrRrIS0YmV9dlrkuunzeedZ00nKZ5/VK3aTcp0743pUYnVtakx3RG7S3qDfLUL8kRTmKBKZnx7QpaPVPziewPlHiEPlfgIhcVWSMqBMRzy39J54k38OcIi+DGVuN292bDBv+JNxmdGGg/fVRKqnm4QclmCjJzjo5q2ckDhbWSkiMjk92usAHVGIsMS1JoNaoRDtz0buthVS1xgfRWLUKvSZM+1wUWlzxgmXq9tq/HQDM2Yb5jL3JB3UrDysLKfADc23Y5GK8egPnHCoz+n4slwS5cV8sPkfOjNOIlEweHjijt5yD85nTD7RJ6wbBl6aWWFrgXMl5b0xEZpeZWC5v50jKHwSpYwCEcwnxxC6FQKMDpF875DeD+Vr8OaGP5c0XVQ32dXnn8/f+vPEBBQeUx+dkO9Gd6QbiuSHTodGib7yIRyRf2EePWod0/M3BmzlFDHhxFvnxdvq8RNp6kgry0u9+M3AKzFboJUo9WcXRMWqf8Ng/5y7JAFUBTfsrnfoO/8e18i1WKiOO/1o4CGgfSnlxHUwH1LLTeJHPw0gU1S4os0tS5iHyTr7qz/V6sIYFcVqdJ2PrdtFcOqp1JaDUohKTFKMhaTUQUzEyodFgItVaLod0MPpM7DFCuLEobpmsFCL32Ien2GLJeGETBcKAy2CvUeiNDu/UhMWeHyXGo5RGSFpOJ6XWYl6GkZWjjlpd9R3bCtTAqcvFPFEauF82MTZPRY5IU9jGgotrerqy0MLtcCfSGzYhzhaXlyiMjXs+tjCdjE5PsvBetZ5QI1rJciGhixITSFVAegyJZduVYK/X5O8SW4DRhSVGJ/QkJRdzakRljpjUQx3JZq+hcLqmQsm2rFLOgbCFFQN5gIFwPKag0v5WHGGLrclsEJsZMiHLZdeXr4yvF9a2CdtqSOVLkKPKesKhXUJi6BjEGAAAA') format('woff2'),
+  url('iconfont.woff?t=1564557398149') format('woff'),
+  url('iconfont.ttf?t=1564557398149') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1564557398149#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cry:before {
+  content: "\e69c";
+}
+
+.icon-service:before {
+  content: "\e6c7";
+}
+

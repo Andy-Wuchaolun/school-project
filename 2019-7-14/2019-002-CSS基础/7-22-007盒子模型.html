@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-22-007盒子模型.html</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+		.father1{
+			overflow: hidden;
+			/*border: 100px solid red; */
+			}
+		.father2{
+			overflow: hidden;
+		}
+		.son1{
+			height: 300px;
+			width: 300px;
+			margin-bottom: 100px;
+			background-color: blue;
+		}
+		.son2{
+			margin-top: 200px;
+			height: 300px;
+			width: 300px;
+			background-color: red;
+	</style>
+</head>
+<body>
+	<div class="father1">
+		<div class="son1"></div>
+	<div class="father2">
+		<div class="son2"></div>
+	</div>
+</body>
+</html>

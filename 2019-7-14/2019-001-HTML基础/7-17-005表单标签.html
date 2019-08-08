@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-17-005表单标签</title>
+<style>textarea{resize:none;}
+</style>
+</head>
+<body align="center">
+	<h1>揍吴晁伦傻逼联盟会员注册</h1>
+	<form action="http://www.baidu.com" method="GET">
+	<p>
+		<label for="username">用户名：</label>
+		<input type="text" name="user" id="username" placeholder="请输入正确的用户名" autocomplete="on"></p>
+	<p>
+		<label for="password">密码：</label>
+			<input type="text" name="password" id="password" placeholder="请输入正确的密码" autocomplete="on">
+	</p>
+	<p>
+		性别：
+		<input type="radio" name="sex" value="male" checked>男
+		<input type="radio" name="sex" value="female">女
+		<input type="radio" name="sex" value="secret">保密
+	</p>
+	<p>爱好
+		<input type="checkbox" name="hobby" value="basketball">篮球
+		<input type="checkbox" name="hobby" value="football">足球
+		<input type="checkbox" name="hobby" value="pin-pang">乒乓球
+		<input type="checkbox" name="hobby" value="jump">跳远
+	</p>
+	<p>自我介绍：
+		<textarea name="introduction" cols="30" rows="10"></textarea>
+	</p>
+	<p>
+		<input type="hidden" value="123456">
+	</p>
+	<p>
+		<input type="file">
+	</p>
+	<p>验证邮箱:
+		<input type="email">
+	</p>
+	<p>电话号码：
+		<input type="number">
+	</p>
+	<p>日期：
+		<input type="date">
+	</p>
+	<p>颜色：<input type="color">
+	</p>
+	<p>
+		<input type="reset">
+		<input type="submit">
+	</p>
+	</form>
+</body>
+</html>

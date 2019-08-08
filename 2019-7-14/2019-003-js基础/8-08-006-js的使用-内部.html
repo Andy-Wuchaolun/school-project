@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-08-006-js的使用-内部.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			margin: 100px auto;
+			background-color: red;
+		}
+	</style>
+	<script>
+		function toBig(){
+			var odiv = document.getElementById('txt')
+			odiv.style.width='200px';
+			odiv.style.height='200px';
+			odiv.style.backgroundColor='blue';
+		}
+		function toSmall(){
+			var odiv = document.getElementById('txt')
+			odiv.style.width='100px';
+			odiv.style.height='100px';
+			odiv.style.backgroundColor='red';
+		}
+	</script>
+</head>
+<body>
+	<div id="txt" onmouseover="toBig()" onmouseout="toSmall()"></div>
+</body>
+</html>

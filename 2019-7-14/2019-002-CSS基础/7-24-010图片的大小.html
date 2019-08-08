@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-24-010图片的大小.html</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		li{
+			height: 400px;
+			width: 400px;
+			margin: 50px auto;
+			border: 2px solid #000;
+			background-image: url(http://wx3.sinaimg.cn/bmiddle/006LfQcply1g4mxb7on9oj30rc0kuq5c.jpg);
+			background-repeat: no-repeat;
+			/*background-size: 100px 100px;*/
+			/*background-size: 200px 100px;*/
+		}
+		li:nth-child(1){
+		background-size: 200px 100px;
+	}
+	li:nth-child(2){
+		background-size: 100px;
+	}
+	li:nth-child(3){
+		background-size: 50% 50%;
+	}
+	li:nth-child(4){
+		background-size: contain;
+	}
+	li:nth-child(5){
+		background-size: cover;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

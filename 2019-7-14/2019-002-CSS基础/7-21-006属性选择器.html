@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-21-006属性选择器.html</title>
+	<style>
+		/*[title]{
+			color: red
+		}*/
+		[href]{
+			color: red
+		}
+		/*[title="kuazhu.com"]{
+			color: red
+		}*/
+		/*[son]{
+			color: red;
+		}*/
+	</style>
+</head>
+<body>
+	<a href="http://www.kuazhu.com">title="kuazhu"</a>
+	<a href="#" title="kuazhu.com">title="kuazhu.com"</a>
+	<a href="#" class="son">woshi1</a>
+	<a href="#" title="kuazhu">title="kuazhu"</a>
+	<a href="#" title="p1">title="p1"</a>
+	<a href="#" class="son">woshi2</a>
+</body>
+</html>

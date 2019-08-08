@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-26-005相对定位和绝对定位的配合使用.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			background-color: red;
+		}
+		.son{
+			position: absolute;
+			bottom: 50%;
+			right: 50%;
+			margin-bottom: -50px;
+			margin-right: -50px; 
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+
+</body>
+</html>

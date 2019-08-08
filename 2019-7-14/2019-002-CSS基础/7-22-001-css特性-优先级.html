@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	7-22-001-css特性-优先级.html</title>
+	<style>
+        /*ul li p{
+        	color: red;
+        }
+        .ul1 .li1 .p1{
+        	color: blue;
+        }
+        #ul11 #li11 #p11{
+        	color: orange;
+        }*/
+        /*ul li p{
+        	color: red;
+        }
+        ul p{
+        	color: blue;
+        }
+        p{
+        	color: pink;
+        }*/
+        *{
+        	color: red !important;
+        }
+        p{
+        	color: blue;
+        }
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="ul1" id="ul11">
+			<li class="li1" id="li11">
+				<p class="p1" id="p11">我是p标签</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

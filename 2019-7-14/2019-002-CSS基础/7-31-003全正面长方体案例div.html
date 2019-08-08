@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-31-003全正面长方体案例div.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			/*list-style: none;*/
+		}
+		.father{
+			width: 200px;
+			height: 200px;
+			/*border: 1px solid #000;*/
+			margin: 150px auto;
+			text-align: center;
+			line-height: 200px;
+			position: relative;
+			transform-style: preserve-3d;
+			transform: rotateX(10deg) rotateY(10deg);
+		}
+		.son{
+			text-align: center;
+			line-height: 200px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		#son1{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: red;
+			transform: translateX(-200px) rotateY(90deg);
+			
+		}
+		#son2{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: blue;
+			transform: translateX(200px) rotateY(-90deg);
+		}
+		#son3{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: green;
+			transform: translateY(-100px) rotateX(-90deg) scale(2,1);
+		}
+		#son4{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: yellow;
+			transform: translateY(100px) rotateX(90deg) scale(2,1);
+		}
+		#son5{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: pink;
+			transform: translateZ(-100px) rotateY(180deg) scale(2,1);
+		}
+		#son6{
+			width: 200px;
+			height: 200px;
+			/*margin: 100px auto;*/
+			background-color: grey;
+			transform: translateZ(100px) scale(2,1);
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div id="son1" class="son">1</div>
+		<div id="son2" class="son">2</div>
+		<div id="son3" class="son">3</div>
+		<div id="son4" class="son">4</div>
+		<div id="son5" class="son">5</div>
+		<div id="son6" class="son">6</div>
+	</div>	
+</body>
+</html>

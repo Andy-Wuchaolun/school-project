@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7-21-010伪类选择器.下.html</title>
+	<style>
+		p:before{
+			content: "我是"
+		}
+		p:after{
+			content: "，我爱吃便便"
+		}
+		[type="text"]:focus{
+			outline-color: red;
+		}
+		[type="checkbox"]:checked{
+			width: 50px; height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<p>吴晁伦</p>
+	<input type="text">
+	<input type="checkbox">
+</body>
+</html>
