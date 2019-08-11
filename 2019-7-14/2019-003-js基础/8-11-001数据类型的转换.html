@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-11-001数据类型的转换.html</title>
+</head>
+<body>
+	<input type="text" id="txt1">+
+	<input type="text" id="txt2">
+	<input type="button" value="点击" id="tet">
+</body>
+<script>
+	var otet = document.getElementById('tet');
+	otet.onclick = function(){
+		// console.log(otet)
+		var otxt1 = document.getElementById('txt1')
+		var otxt2 = document.getElementById('txt2')
+		var text1 = parseFloat(txt1.value);
+		var text2 = parseFloat(txt2.value);
+		// console.log(text1+text2);
+		if(isNaN(text1)){
+			alert('第一个输入框输入的不是数字')
+		}
+		else if(isNaN(text2)){
+			alert('第二个输入框输入的不是数字')
+		}
+		else{
+			alert(text1+text2);
+		}
+	}
+</script>
+</html>
