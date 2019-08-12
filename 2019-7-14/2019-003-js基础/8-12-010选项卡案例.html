@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-12-010选项卡案例.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#nav-list{
+			overflow: hidden;
+		}
+		#nav-list li{
+			width: 150px;
+			height: 40px;
+			line-height: 40px;
+			float: left;
+			text-align: center;
+		}
+		#content-list li{
+			margin-top: 60px;
+			width: 600px;
+			height: 600px;
+			border: 1px solid #000;
+			text-align: center;
+			line-height: 600px;
+			display: none;
+			font-size: 60px;
+		}
+		#nav-list .active{
+			color: #ff6700;
+			border-bottom: 2px solid #ff6700;
+		}
+	</style>
+</head>
+<body>
+	<ul id="nav-list">
+		<li class="active">电视</li>
+		<li>冰箱</li>
+		<li>洗衣机</li>
+		<li>手机</li>
+	</ul>
+	<ul id="content-list">
+		<li style="display: block">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script>
+	var oNav = document.querySelectorAll('#nav-list li');
+	var oContent = document.querySelectorAll('#content-list li');
+	// console.log(oNav)
+	// console.log(oContent)
+	for (var i = 0; i <oNav.length; i++) {
+		oNav[i].index= i;
+		oNav[i].onmouseover =function(){
+			console.log(oNav[i])
+			for (var j=0; j<oNav.length; j++) {
+				oNav[j].className='';
+				oContent[j].style.display='none';
+			}
+			this.className ='active';
+			oContent[this.index].style.display='block';
+		}
+	}
+
+</script>
+</html>

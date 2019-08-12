@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-12-009案例-全选全不选反选.html</title>
+</head>
+<body>
+	<input type="button" value="全选" id="btn1">
+	<input type="button" value="全不选" id="btn2">
+	<input type="button" value="反选" id="btn3">
+	<div id="content">	
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+	</div>
+</body>
+<script>
+	var oBtn1 = document.getElementById('btn1')
+	var oBtn2 = document.getElementById('btn2')
+	var oBtn3 = document.getElementById('btn3')
+	var aContent = document.querySelectorAll('[type="checkbox"]')
+	console.log(aContent)
+	oBtn1.onclick = function(){
+		for (var i = 0; i <aContent.length; i++) {
+			aContent[i].checked = true;
+		}	
+	}
+	oBtn2.onclick = function(){
+		for (var i = 0; i <aContent.length; i++) {
+			aContent[i].checked = false;
+		}
+	}
+	oBtn3.onclick = function(){
+		for (var i=0;i<aContent.length;i++){
+			if (aContent[i].checked == false) {
+				aContent.checked = true;
+			}else {
+				aContent[i].checked = false;
+			}
+	}
+}
+</script>
+</html>
