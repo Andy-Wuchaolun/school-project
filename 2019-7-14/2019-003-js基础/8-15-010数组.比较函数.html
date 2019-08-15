@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-15-010数组.比较函数.html</title>
+	<script>
+		var arr  = [5,9,25,14,3,6,17];
+		var arr1 =arr.sort(function(n1,n2){
+			// return n1-n2;
+			//倒序
+			// if (n1<n2) {
+			// 	return 222;
+			// }else if(n1>n2){
+			// 	return -2;
+			// }else{
+			// 	return 0;
+			// }
+			//正序
+			if (n1>n2) {
+				return 222;
+			}else if(n1<n2){
+				return -2;
+			}else{
+				return 0;
+			}
+		})
+			
+		
+		
+		console.log(arr1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
