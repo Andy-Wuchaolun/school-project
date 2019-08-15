@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-14-011函数的返回值.html</title>
+	<script>
+		function sum(){
+			// console.log(arguments)
+			result =0
+			for(var i=0;i<arguments.length;i++){
+				result=result+arguments[i]
+			}
+			// return result;
+			return{
+				result:result,
+				sum:80
+			}
+				
+			
+		}
+		alert(sum(1,5,6,3));
+			
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
