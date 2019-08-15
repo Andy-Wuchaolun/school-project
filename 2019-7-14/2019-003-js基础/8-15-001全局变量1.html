@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-15-001全局变量1.html</title>
+	<script>
+		var a =1 
+		function fn1(){
+			console.log('fn1',a)
+			a =2
+			function fn2(){
+				console.log('fn2',a)
+			}
+			fn2()
+		}
+		fn1()
+		console.log('glable',a)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

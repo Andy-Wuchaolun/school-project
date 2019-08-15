@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数作用域.html</title>
+	<script>
+		var i
+		function all(){
+			if (true) {
+				j=2
+			}
+			// console.log(j)
+			for (var i = 0; i <5; i++) {
+				console.log(i)
+			}
+   			console.log(j)
+		}
+		console.log(i)
+		all()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

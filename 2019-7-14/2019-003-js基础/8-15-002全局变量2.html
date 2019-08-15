@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-15-002全局变量2.html</title>
+	<script>
+		var a =1 
+		function fn1(){
+			// var a
+			console.log('fn1',a)
+			var a =2
+			function fn2(){
+				console.log('fn2',a)
+			}
+			fn2()
+			console.log('glable1',a)
+		}
+		fn1()
+		console.log('glable2',a)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

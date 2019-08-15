@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-15-005作用域的决定.html</title>
+	<script>
+		// 举例1:
+		// var age = 1;
+		// function getAge(){
+		// 	var age = 2;
+		// 	return age;
+		// }
+		// alert(age); 
+		// alert(getAge());//函数执行时age的值是1,但在函数内部定义时age是2,所以结果是2
+		// 举例2:
+		var a = 1;
+		function fn(){
+			console.log(a);//定义时a的值时1
+		}
+		function show(){
+			var a = 2;
+			fn();//执行时a的值是2
+		}
+		show();//show中的fn执行时a的值是2,fn在定义时a的值是1,所以结果是1
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
