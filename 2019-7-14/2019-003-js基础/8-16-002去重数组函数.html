@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-16-002去重数组函数.html</title>
+	<script>
+		var arr =[5,9,6,2,5,5,9,5,4,6,2,4]
+		console.log('before',arr)
+		function uniqueArray(a){
+			var result=[];
+			for(var i=0;i<a.length;i++){
+				var isDup = false;
+				for(var j=0;j<result.length;j++){
+					if(arr[i]==result[j]){
+						isDup=true;
+					}
+				}
+				if(!isDup){
+					result.push(arr[i]);
+				}
+			}
+			return result;
+		}
+		var arr1 = uniqueArray(arr);
+		console.log('after',arr);
+		console.log('new',arr1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

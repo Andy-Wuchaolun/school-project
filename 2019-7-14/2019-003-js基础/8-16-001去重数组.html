@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-16-001去重数组.html</title>
+	<script>
+		var arr=[1,9,6,3,5,4,1,9,8,6];
+		var result=[];
+		for(var i=0;i<arr.length;i++){
+			var isDup=false;
+			for(var j=0;j<result.length;j++){//问题思考（加不加等号）
+				if (arr[i] ==result[j]) {
+					isDup = true;
+					// console.log()
+					break;
+				}
+			}
+			if(!isDup){
+				result.push(arr[i]);
+				}
+		}
+		console.log(result);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

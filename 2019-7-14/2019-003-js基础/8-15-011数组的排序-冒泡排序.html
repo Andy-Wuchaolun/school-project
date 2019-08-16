@@ -9,7 +9,7 @@
 		console.log(arr1);
 		*/
 		//冒泡排序
-		var arr  = [5,9,25,14,3,6,17];
+		var arr  = [5,9,25,14,3,6,17,8,78,36,0];
 		//[5,9,25,14,3,6,17]
 		//[3,9,25,14,5,6,17]
 		//[3,5,25,14,9,6,17]
@@ -23,7 +23,7 @@
 		for(var i=0;i<arr.length;i++){
 			// console.log(arr);
 			var tmp=0
-			for(var j=0;j<i+1;j++){
+			for(var j=0;j<i+1;j++){//问题思考（就<哪个值合适）
 				// console.log(arr[j])
 				if(arr[i]<arr[j]){
 					tmp = arr[i];

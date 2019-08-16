@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-16-003去重数组函数-改进版.html</title>
+	<script>
+		var arr =[5,9,6,2,5,5,9,5,4,6,2,4]
+		// console.log('before',arr)
+		function uniqueArray(a){
+			var result=[];
+			for(var i=0;i<arr.length;i++){
+				if(result.indexOf(arr[i]) == -1){
+					result.push(arr[i])
+					}
+				}
+			return result;
+		}
+		var arr1 = uniqueArray(arr);
+		console.log('after',arr);
+		console.log('new',arr1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

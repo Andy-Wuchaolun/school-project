@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-16-011-获取-设置-删除属性和值.html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="点击">
+	<textarea name="" id="area" cols="30" rows="10"></textarea>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oArea = document.getElementById('area');
+	oTxt.onclick=function(){
+		var val = oTxt.value;
+		oArea.value = val;
+	}
+	// console.log(oTxt)
+	// oTxt.value='888';
+	// oTxt['value']='8888'
+	var val=oTxt.value;
+	console.log(val)
+</script>
+</html>

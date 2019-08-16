@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-16-010获取兄弟节点.html</title>
+</head>
+<body>
+	<ul id="father">
+		<li>1</li>
+		<li>2</li>
+		<li id="li3">3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+<script>
+	var oLi3=document.getElementById('li3');
+	var aUl=document.getElementById('father')
+	console.log(oLi3.nextSibling ==aUl.childNodes[6]);
+	console.log(oLi3.previousSibling==aUl.childNodes[4]);
+</script>
+</html>
