@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-18-010动态九宫格.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: relative;
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn" value="克隆">
+	<div id="box">
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+	</div>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var oBox = document.getElementById('box');
+	var oSon = oBox.children;
+	var iHeight = 100;
+	var iWidth = 100;
+	var iMargin = 15;
+	var all = 3;
+	oBtn.onclick = function(){
+		oBox.appendChild('div')
+		
+		for(var i=0;i<oSon.length;i++){
+		oLie = i % all;
+		oHang = parseInt(i / all);
+		oSon[i].style.top = oHang*(iHeight+iMargin)+'px';
+		oSon[i].style.left= oLie*(iWidth+iMargin)+'px';
+
+	}
+	}
+	
+</script>
+</html>

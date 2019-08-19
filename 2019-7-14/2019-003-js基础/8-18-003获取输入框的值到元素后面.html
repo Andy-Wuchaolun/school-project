@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-18-003获取输入框的值到元素后面.html</title>
+</head>
+<body>
+	<textarea id="txt" cols="30" rows="10"></textarea>
+	<input type="button" id="btn" value="追加">
+	<ul id="ul1">
+		<li>我是第一条评论</li>
+
+	</ul>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oUl1 = document.getElementById('ul1');
+	oBtn.onclick = function(){
+		var val=oTxt.value;
+		oLi = document.createElement('li');
+		oLi.innerHTML=val;
+		oUl1.appendChild(oLi);
+		oTxt.value='';
+	}
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-18-004无序列表项中值对列表排序.html</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>8</li>
+		<li>5</li>
+		<li>93</li>
+		<li>3</li>
+		<li>7</li>
+		<li>4</li>
+		<li>15</li>
+	</ul>
+	<input type="button" id="btn" value="排序">
+</body>
+<script>
+	var oUl = document.getElementById('ul1');
+	var oBtn = document.getElementById('btn');
+	var aLi = oUl.children;
+	// console.log(aLi)
+	var result = [];
+	for(var i=0;i<aLi.length;i++){
+		result.push(aLi[i]);
+	}
+	// console.log(result);
+	oBtn.onclick = function(){		
+			result.sort(function(oUl1,oUl2){
+				return oUl1.innerHTML - oUl2.innerHTML
+			})
+			console.log(result);
+		for(var j=0;j<result.length;j++){
+			oUl.appendChild(result[j])
+		}
+		}
+		
+	
+</script>
+</html>

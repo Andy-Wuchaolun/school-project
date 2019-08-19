@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-18-008隐藏父节点案例改进版.html</title>
+</head>
+<body>
+	<ul id="father">
+		<li>1<a href="javascript:;">隐藏</a></li>
+		<li>2<a href="javascript:;">隐藏</a></li>
+		<li>3<a href="javascript:;">隐藏</a></li>
+		<li>4<a href="javascript:;">隐藏</a></li>
+		<li>5<a href="javascript:;">隐藏</a></li>
+		<li>6<a href="javascript:;">隐藏</a></li>
+		<li>7<a href="javascript:;">隐藏</a></li>
+		<li>8<a href="javascript:;">隐藏</a></li>
+		<li>9<a href="javascript:;">隐藏</a></li>
+		<li>10<a href="javascript:;">隐藏</a></li>
+	</ul>
+</body>
+<script>
+	var aA =document.getElementsByTagName('a');
+	var oUl = document.getElementById('father');
+	for(var i=0;i<aA.length;i++){
+		aA[i].onclick = function(){
+			var oLi = this.parentNode;
+			// oLi.style.display='none';
+			oUl.removeChild(oLi);
+		}
+		// console.log()
+	}
+</script>
+</html>
