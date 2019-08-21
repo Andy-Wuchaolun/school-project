@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-19-007延迟型定时器.html</title>
+</head>
+<body>
+</body>
+<script>
+	/*
+	var atxt = function(){
+		console.log(888)
+	}
+	*/
+	console.log(111);
+	/*
+	setTimeout('console.log("aaa...")',3000)//注意：引号的运用，以及代码字符串的意思。
+	*/
+	
+	var timer = setTimeout(function(){
+		console.log('aaaa,,,')
+	},3000)
+	console.log(timer)
+		clearTimeout(timer)
+	/*
+	setTimeout(atxt,3000)
+	*/
+	//注意：函数调用的意义以及调用函数的值（undefined）
+
+</script>
+</html>

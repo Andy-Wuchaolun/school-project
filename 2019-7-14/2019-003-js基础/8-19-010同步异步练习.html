@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-19-010同步异步练习.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	  console.log(1);
+	  setTimeout(function () {
+	      console.log(2);
+	  }, 0);
+	  console.log(3);
+	  //132
+
+	  console.log('A');
+      setTimeout(function () {
+          console.log('B');
+      }, 0);
+      while (true) {
+      //死循环
+      }
+
+      for (var i = 0; i < 3; i++) {
+          setTimeout(function () {
+              console.log(i);
+          }, 1000);
+      }//333，注意对进行的每一步进行分析
+</script>
+</html>

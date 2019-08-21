@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-21-003倒计时.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #000;
+		}
+		#timer{
+			/*width: 450px;*/
+			text-align: center;
+			margin: 200px auto;
+			font-size: 90px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+	</div>
+</body>
+<script>
+	function hi(num){
+		num<10 ? num = '0'+num : num =''+num;
+		return num;
+	}
+	var oTimer = document.getElementById('timer');
+	var endTime = new Date('2019-08-21 13:00:00');
+	var nowTime = Date.now();
+	var timefalse = endTime.getTime();
+	if (endNow<=0) {
+		endNow = 0;
+		clearInterval(sttime);
+	}
+	function handletime(){
+		
+		var endNow = (timefalse - nowTime)/1000
+		var iHour = parseInt(endNow/3600);
+		var iMinute = parseInt(endNow%3600/60);
+		var iSecond = parseInt(endNow%3600%60);
+		oTimer.innerHTML = "距离下课时间还有"+hi(iHour)+"时"+hi(iMinute)+"分"+hi(iSecond)+"秒";
+	}
+	var sttime = 0;
+	sttime = setInterval(handletime,1000)
+	handletime();
+</script>
+</html>

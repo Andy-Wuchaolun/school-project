@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-19-006 history对象.html</title>
+</head>
+<body>
+	<a href="https://www.kuazhu.com">跨猪</a>
+	<a href="https://www.baidu.com">百度</a>
+	<input type="button" id="btn" value="前进">
+	<input type="button" id="btn2" value="后退">
+</body>
+ <script>
+ 	var oBtn = document.getElementById('btn')
+ 	var oBtn2 = document.getElementById('btn2')
+ 	oBtn.onclick = function(){
+ 		window.history.go(1)
+ 	}
+ 	oBtn2.onclick = function(){
+ 		window.history.go(-1)
+ 	}
+ </script>
+</html>

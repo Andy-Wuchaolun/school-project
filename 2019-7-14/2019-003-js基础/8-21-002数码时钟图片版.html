@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-21-002数码时钟图片版.html</title>
+</head>
+<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #000;
+		}
+		#timer{
+			width: 450px;
+			margin: 200px auto;
+			font-size: 90px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		<img src="photo/1.png" alt="">
+		<img src="photo/1.png" alt="">
+		:
+		<img src="photo/1.png" alt="">
+		<img src="photo/1.png" alt="">
+		:
+		<img src="photo/1.png" alt="">
+		<img src="photo/1.png" alt="">
+	</div>
+</body>
+<script>
+	function hi(num){
+		num<10 ? num = '0'+num : num =''+num;
+		return num;
+	}
+	function handletime(){
+	var oTimer = document.getElementById('timer');
+	var aImg = document.getElementsByTagName('img');
+	var Today = new Date();
+	var iHour = Today.getHours();
+	var iMinute = Today.getMinutes();
+	var iSecond = Today.getSeconds();
+	// console.log(iHour)
+	// console.log(iMinute)
+	// console.log(iSecond)
+	// console.log(allTime.charAt(0))
+	var allTime = hi(iHour)+hi(iMinute)+hi(iSecond);
+	for(var i =0; i<aImg.length;i++){
+		aImg[i].src = "photo/"+allTime.charAt(i)+".png"
+	}
+}
+	setInterval(handletime,1000)
+	handletime();
+</script>
+</html>

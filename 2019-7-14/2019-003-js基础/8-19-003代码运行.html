@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-19-003代码运行.html</title>
+</head>
+<body>
+	<textarea id="txt" cols="30" rows="10"></textarea>
+	<input type="button" id="btn" value="点击">
+</body>
+<script>
+	var oBtn = document.getElementById('btn')
+	var oTxt = document.getElementById('txt')
+
+	oBtn.onclick = function(){
+		// var winNew = 
+		var val = oTxt.value;
+		winNew = window.open();
+		winNew.document.write(val);//经常出错，重点注意
+	}
+</script>
+</html>
