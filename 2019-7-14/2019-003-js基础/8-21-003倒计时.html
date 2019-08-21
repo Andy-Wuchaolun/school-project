@@ -30,23 +30,23 @@
 		return num;
 	}
 	var oTimer = document.getElementById('timer');
-	var endTime = new Date('2019-08-21 13:00:00');
-	var nowTime = Date.now();
+	var endTime = new Date('2019-08-21 16:00:00');
 	var timefalse = endTime.getTime();
-	if (endNow<=0) {
+	function handletime(){
+		// console.log('aaa..')
+		var nowTime = Date.now();
+		var endNow = (timefalse - nowTime)/1000
+		if (endNow<=0) {
 		endNow = 0;
 		clearInterval(sttime);
-	}
-	function handletime(){
-		
-		var endNow = (timefalse - nowTime)/1000
+		}
 		var iHour = parseInt(endNow/3600);
 		var iMinute = parseInt(endNow%3600/60);
 		var iSecond = parseInt(endNow%3600%60);
 		oTimer.innerHTML = "距离下课时间还有"+hi(iHour)+"时"+hi(iMinute)+"分"+hi(iSecond)+"秒";
 	}
 	var sttime = 0;
-	sttime = setInterval(handletime,1000)
+	sttime = setInterval(handletime,1000);
 	handletime();
 </script>
 </html>
