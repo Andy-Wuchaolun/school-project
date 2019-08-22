@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-23-004多物体同时运动.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 100px auto;
+			text-align: center;
+			line-height: 100px;
+		}
+		#box3{
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">变高</div>
+	<div id="box2">变宽</div>
+	<div id="box3">变红</div>
+</body>
+<script>
+	var animite = function(obj,attr,target){
+		clearInterval(obj.timer);
+		var iSpeed = 0;		
+		obj.timer = setInterval(function(){
+			var current =parseFloat(getComputedStyle(obj,false)[attr]);
+			if(attr == 'opacity'){
+				current = Math.round(current*100)
+			}
+			if(current < target){
+				iSpeed = 7;
+			}else{
+				iSpeed = -7;
+			}
+			if(Math.abs(target - current) < Math.abs(iSpeed)){
+				if(attr == 'opacity'){
+					obj.style[attr] = '1';
+				}else{
+					obj.style[attr]= target;
+				}
+				clearInterval(obj.timer)
+			}else{
+				if(attr == 'opacity'){
+					obj.style[attr] = (current + iSpeed)/100;
+				}else{
+					obj.style[attr] = current + iSpeed +'px';
+				}
+			}
+		},30)
+	}
+	var oDiv1 = document.getElementById('box1');
+	var oDiv2 = document.getElementById('box2');
+	var oDiv3 = document.getElementById('box3');
+	var timer;
+	oDiv1.onmouseover = function(){
+		animite(oDiv1,'height',300);
+	}
+	oDiv2.onmouseover = function(){
+		animite(oDiv2,'width',300);
+	}
+	oDiv3.onmouseover = function(){
+		animite(oDiv3,'opacity',100);
+	}
+</script>
+</html>

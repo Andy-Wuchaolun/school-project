@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-23-001匀速动画.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			left: 0px;
+			height: 20px;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		#lin{
+			position: absolute;
+			top: 0px;
+			left: 400px;
+			height: 600px;
+			/*width: 400px;*/
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">开始动画</button>
+	<div id="box"></div>
+	<line id="lin"></line>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	var oBox = document.getElementById('box');
+	var oLin = document.getElementById('lin');
+	var timer = 0;
+	oBtn.onclick = function(){
+		clearInterval(timer);//防止多次点击对速度造成的影响
+		var iSpeed = 0;
+		// if(oBox.offsetLeft <400){//动画速度的正负值
+		// 	iSpeed = 10;
+		// }else{
+		// 	iSpeed = -10;
+		// }
+		if(oBox.offsetLeft <400){
+			iSpeed = 7;
+		}else{
+			iSpeed = -7;
+		}
+		timer = setInterval(function(){
+			/*if (oBox.offsetLeft == 400) {*/
+				console.log('timer',timer,oBox.offsetLeft)
+			if(Math.abs(400 - oBox.offsetLeft) < Math.abs(iSpeed)){//动画终止的条件
+				oBox.style.left = '400px';
+				clearInterval(timer)
+			}else{
+				oBox.style.left = oBox.offsetLeft + iSpeed + 'px';	
+			}
+		},30)	
+	}
+</script>
+</html>

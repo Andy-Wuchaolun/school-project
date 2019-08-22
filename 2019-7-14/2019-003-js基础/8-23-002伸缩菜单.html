@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-23-002伸缩菜单.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#main{
+			position: relative;
+			top: 100px;
+			left: -300px;
+			width: 300px;
+			height: 300px;
+			background-color: #ccc;
+		}
+		#sub{
+			position: absolute;
+			top: 0px;
+			right: -100px;
+			width: 100px;
+			height: 300px;
+			background-color: pink;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="sub"></div>
+	</div>
+</body>
+<script>
+	var oMain = document.getElementById('main');
+	var timer = 0;
+	oMain.onmouseover = function(){
+		clearInterval(timer);
+		var iSpeed = 0;
+		if(oMain.offsetLeft <0){
+			iSpeed = 10;
+		}else{
+			iSpeed = -10;
+		}
+		timer = setInterval(function(){
+			if(Math.abs(0 - oMain.offsetLeft) < Math.abs(iSpeed)){
+				oMain.style.left = '0px';
+				clearInterval(timer)
+			}else{
+				oMain.style.left = oMain.offsetLeft + iSpeed + 'px';	
+			}
+		},30)	
+	}
+	oMain.onmouseout = function(){
+		clearInterval(timer);
+		var iSpeed = 0;
+		if(oMain.offsetLeft <-300){
+			iSpeed = 10;
+		}else{
+			iSpeed = -10;
+		}
+		timer = setInterval(function(){
+			if(Math.abs(-300 - oMain.offsetLeft) < Math.abs(iSpeed)){
+				oMain.style.left = '-300px';
+				clearInterval(timer)
+			}else{
+				oMain.style.left = oMain.offsetLeft + iSpeed + 'px';	
+			}
+		},30)	
+	}
+</script>
+</html>
