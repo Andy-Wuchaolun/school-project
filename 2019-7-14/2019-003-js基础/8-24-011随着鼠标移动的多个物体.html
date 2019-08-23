@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-24-011随着鼠标移动的多个物体.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 3000px;
+			height: 3000px;
+		}
+		div{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script src="js/util.js"></script>
+<script>
+	var aDiv = document.getElementByTagName('div');
+	document.addEventListener('mousemove',function(ev){
+		console.log(ev.clientX,ev.clientY);
+		oBox.style.left = ev.clientX + getScrollLeft() +'px';
+		oBox.style.top = ev.clientY + getScrollTop() +'px';
+	},false)
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-24-003多物体同时运动的综合动画.html</title>
+<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 100px auto;
+			text-align: center;
+			line-height: 100px;
+		}
+		#box3{
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">变高</div>
+	<div id="box2">变宽</div>
+	<div id="box3">变红</div>
+</body>
+<script>
+	//减速运动的多物体同时运动
+	var animite2 = function(obj,attr,target,isLinear){
+		if(typeof isLinear == 'undefined'){
+			isLinear = true;
+		}
+		clearInterval(obj.timer);
+		var iSpeed = 0;		
+		obj.timer = setInterval(function(){
+			var isStop = 0;
+			var current = parseFloat(getComputedStyle(obj,false)[attr]);
+			if(attr == 'opacity'){
+				current = Math.round(current*100);
+			}
+			if(isLinear){
+				if(current < target){
+				iSpeed = 7;
+				}else{
+					iSpeed = -7;
+				}
+			}
+			//减速动画
+			else{
+				iSpeed = (target - current)/10;
+				if(iSpeed >0){
+					iSpeed = Math.ceil(iSpeed)
+				}else{
+					iSpeed = Math.floor(iSpeed)
+				}
+			}
+			//yun速
+			if(isLinear){
+				if(Math.abs(target - current) < Math.abs(iSpeed)){
+					isStop = true;
+			}else{//jian
+				if(!iSpeed){
+					isStop = true;
+				}
+			}
+			if(isStop){
+				if(attr == 'opacity'){
+						obj.style[attr] = '0.5';
+					}else{
+						obj.style[attr] = target;
+					}
+				clearInterval(obj.timer)
+				}else{
+					if(attr == 'opacity'){
+						obj.style[attr] = (current + iSpeed)/100;
+					}else{
+						obj.style[attr] = current + iSpeed +'px';
+					}
+				}
+			}			
+			
+		},30)	
+	}
+	var oDiv1 = document.getElementById('box1');
+	var oDiv2 = document.getElementById('box2');
+	var oDiv3 = document.getElementById('box3');
+	var timer;
+	oDiv1.onmouseover = function(){
+		animite2(oDiv1,'height',300);
+	}
+	oDiv2.onmouseover = function(){
+		animite2(oDiv2,'width',300,false);
+	}
+	oDiv3.onmouseover = function(){
+		animite2(oDiv3,'opacity',100);
+	}
+</script>
+</html>

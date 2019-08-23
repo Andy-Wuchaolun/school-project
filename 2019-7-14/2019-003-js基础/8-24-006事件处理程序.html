@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-24-006事件处理程序.html</title>
+</head>
+<body>
+	<button id="btn">点击</button>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	function sayHi(){
+		alert('hihihi')
+	}
+	function sayHello(){
+		alert('hello')
+	}
+	//0级
+	/*
+	oBtn.onclick = sayHi;
+	oBtn.onclick = sayHello;//DOM0级下面的会层叠上面的，所以两个一起的时候会显示下面的
+	*/
+	//DOM2级
+	oBtn.addEventListener('click',sayHi,false);
+	oBtn.addEventListener('click',sayHello,false);//不会层叠上面的内容，两个都可以显示
+	oBtn.addEventListener('click',function(){
+		alert('wawawa')
+	},false);
+	oBtn.removeEventListener('click',sayHello,false);//移除的时候最后面的布尔值要一致
+	oBtn.removeEventListener('click',function(){
+		alert('wawawa')
+	},false);
+</script>
+</html>

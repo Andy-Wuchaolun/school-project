@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-24-005动画-发布效果.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 400px;
+			margin: 100px auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<textarea  id="txt" cols="30" rows="10"></textarea>
+		<input type="button" id="btn" value="提交">
+		<ul id="ul1">
+		</ul>
+	</div>
+</body>
+<script src="js/util.js"></script>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oUl1 = document.getElementById('ul1');
+	oBtn.onclick = function(){
+		if(oTxt.value == ''){
+		alert('请输入内容后在提交')
+		}else{
+			var oLi = document.createElement('li');
+			oLi.innerHTML = oTxt.value;
+			oUl1.insertBefore(oLi,oUl1.firstChild);
+			oTxt.value = '';
+			oLi.style.height = '';
+			oLi.style.opacity = '0';
+			animate2(oLi,{height:40},true,function(){
+				animate2(oLi,{opacity:100})
+			})
+		}
+	}
+</script>
+</html>
