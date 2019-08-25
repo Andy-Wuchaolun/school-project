@@ -38,8 +38,8 @@
 	var aDiv = document.getElementByTagName('div');
 	document.addEventListener('mousemove',function(ev){
 		console.log(ev.clientX,ev.clientY);
-		oBox.style.left = ev.clientX + getScrollLeft() +'px';
-		oBox.style.top = ev.clientY + getScrollTop() +'px';
+		aDiv[0].style.left = ev.clientX + getScrollLeft() +'px';
+		aDiv[0].style.top = ev.clientY + getScrollTop() +'px';
 	},false)
 </script>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-25-007碰撞试验.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box1{
+			position: relative;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		#box2{
+			position: absolute;
+			top: 200px;
+			left: 500px;
+			width: 600px;
+			height: 600px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+<script>
+	var oBox1 = document.getElementById('box1');
+	var oBox2 = document.getElementById('box2');
+	var disX,disY = 0;
+	oBox1.onmousedown = function(ev){
+		disX = ev.clientX - oBox1.offsetLeft;
+		disY = ev.clientY - oBox1.offsetTop;
+		document.onmousemove = function(ev){
+			oBox1.style.left = ev.clientX - disX +'px';
+			oBox1.style.top = ev.clientY - disY +'px';
+			if(oBox1.offsetLeft+oBox1.offsetWidth>oBox2.offsetLeft
+				&& oBox1.offsetLeft>oBox2.offsetLeft+oBox2.offsetWidth
+				&& oBox2.offsetLeft+oBox2.offsetWidth>oBox1.offsetLeft
+				&& oBox2.offsetLeft>oBox1.offsetLeft+oBox1.offsetWidth){
+				oBox2.style.backgroundColor = 'blue';
+			}
+		}
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
+	}
+</script>
+</html>

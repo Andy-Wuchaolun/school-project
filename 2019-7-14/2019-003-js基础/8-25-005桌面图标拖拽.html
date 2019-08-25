@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-25-005桌面图标拖拽.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		#box{
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	var disX,disY = 0;
+	oBox.onmousedown = function(ev){
+		disX = ev.clientX - oBox.offsetLeft;
+		disY = ev.clientY - oBox.offsetTop;
+		var oClone = document.createElement('div');
+		oClone.style.position = 'absolute';
+		oClone.style.height = oBox.offsetHeight + 'px';
+		oClone.style.width = oBox.offsetWidth + 'px';
+		oClone.style.left = oBox.offsetLeft +'px';
+		oClone.style.top = oBox.offsetTop +'px';
+		oClone.style.backgroundColor = 'rgba(255,0,0,0.5)';
+		document.body.appendChild(oClone);
+		document.onmousemove = function(ev){
+			oClone.style.left = ev.clientX - disX +'px';
+			oClone.style.top = ev.clientY - disY +'px';
+		}
+		document.onmouseup = function(){
+			oBox.style.left = oClone.offsetLeft +'px';
+			oBox.style.top = oClone.offsetTop +'px';
+			document.body.removeChild(oClone)
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
+	}
+</script>
+</html>

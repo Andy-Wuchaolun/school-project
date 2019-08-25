@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-25-002将元素限制在浏览器中的拖拽.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		body{
+			position: relative;
+		}
+		#box{
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	var disX,disY = 0;
+	oBox.onmousedown = function(ev){
+		disX = ev.clientX - oBox.offsetLeft;
+		disY = ev.clientY - oBox.offsetTop;
+		
+		document.onmousemove = function(ev){
+			var t = ev.clientY - disY;
+			var l = ev.clientX - disX;
+			if(l<0){
+				l = 0;
+			}else if(l > (window.innerWidth - oBox.offsetWidth)){
+				l = window.innerWidth - oBox.offsetWidth;
+			}
+			if(t<0){
+				t = 0;
+			}else if(t > (window.innerHeight - oBox.offsetHeight)){
+				t = window.innerHeight - oBox.offsetHeight;
+			}
+			oBox.style.left = l +'px';
+			oBox.style.top = t +'px';
+		}
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
+	}
+</script>
+</html>
