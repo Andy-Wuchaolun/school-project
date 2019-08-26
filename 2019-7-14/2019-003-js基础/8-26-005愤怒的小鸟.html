@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-26-005愤怒的小鸟.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			position: relative;
+			top: 50px;
+			left: 200px;
+			width: 600px;
+			height: 600px;
+			border: 1px solid #000;
+		}
+		#bird{
+			position: absolute;
+			top: 0px;
+			left: 200px;
+			background-color: red;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="bird">
+			<img src="" alt="">
+		</div>
+	</div>
+</body>
+<script>
+	var oWrap = document.getElementById('wrap')
+	var oBird = document.getElementById('bird')
+	var timer = 0;
+	var iSpeed = 0;
+	clearInterval(timer);
+	timer = setInterval(function(){
+		iSpeed += 1;
+		var t = oBird.offsetHeight + iSpeed
+		if(t<0){
+			t=0
+		}else if(t>oWrap.offsetHeight-2-oBird.offsetHeight){
+			t = oWrap.offsetHeight-2-oBird.offsetHeight;
+		}
+		oBird.style.top = t+'px';
+
+	},30)
+</script>
+</html>

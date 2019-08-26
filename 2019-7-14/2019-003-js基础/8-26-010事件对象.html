@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-26-010事件对象.html</title>
+</head>
+<body>
+	<div id="father">
+		<div id="son"></div>
+	</div>
+</body>
+<script>
+	document.onclick = function(){
+		console.log('event.clientY,event.clientX',event.clientY,event.clientX)
+		console.log("event.pageY,event.pageX", event.pageY,event.pageX)
+		console.log('event.screenY,event.screenX',event.screenY,event.screenX)
+	}
+	// event.wheelDelta 鼠标滚轮距离
+</script>
+</html>

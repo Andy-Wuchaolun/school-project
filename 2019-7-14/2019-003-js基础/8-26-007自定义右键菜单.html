@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-26-007自定义右键菜单.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			display: none;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 200px;
+			height: 300px;
+			background-color: grey;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	document.oncontextmenu = function(ev){
+		//return false;放在前面不能实现
+		ev.preventDefault();//放在前面可以实现
+		oBox.style.display = 'block';
+		oBox.style.left = ev.clientX + 'px';
+		oBox.style.top = ev.clientY + 'px';
+
+	}
+	oBox.onclick = function(ev){
+		ev.stopPropagation()
+	}//不是很理解，下课研究
+	document.onclick = function(){
+		oBox.style.display = 'none';
+	}
+</script>
+</html>

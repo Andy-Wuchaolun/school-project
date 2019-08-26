@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-26-006表单事件.html</title>
+</head>
+<body>
+	<form action="http://www.kuazhu.com" id="form1">
+		<input type="text" id="txt">
+		<input type="submit" value="提交" id="sub">
+		<input type="reset" value="重置" id="res">
+		<p id="mesage"></p>
+	</form>
+</body>
+<script>
+	var oTxt = document.getElementById('txt')
+	var oForm = document.getElementById('form1')
+	var oSub = document.getElementById('sub')
+	var oRes = document.getElementById('res')
+	var oMessage = document.getElementById('message')
+	oTxt.onfocus = function(){
+		console.log('focus...')
+		
+	}
+	oTxt.onblur = function(){
+		console.log('onblur...')
+	}
+	oTxt.onchange = function(){
+		console.log('onchange...')
+
+	}
+	oTxt.oninput = function(){
+		console.log('oninput...')
+	}
+	oForm.onsubmit = function(){
+		console.log('onsubmit...')
+	}
+	oForm.onreset = function(){
+		console.log('onreset...')
+	}
+</script>
+</html>
