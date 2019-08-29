@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-007用JS内置的构造函数创建对象的缺点.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr = new Array();
+	console.log(arr);
+	arr.name = 'Andy';
+	arr.age = 18;
+	arr.hobby = 'cook';
+	arr.sort = function(){
+		console.log('aaaa....')//用内置构造函数来创建自定义的对象,会存在把内置构造函数生成的对象自带的方法和属性覆盖掉的风险
+	}
+	console.log(arr)
+	// arr.sort(function(n1,n2){
+	// 	return n1-n2;
+	// })
+	// console.log(arr);
+</script>
+</html>

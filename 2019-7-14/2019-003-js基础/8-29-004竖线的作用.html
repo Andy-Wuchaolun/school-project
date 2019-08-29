@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-29-004竖线的作用.html</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="发布">
+	<ul id="ul1"></ul>
+</body>
+<script>
+	var oTxt = document.getElementById('txt')
+	var oUl = document.getElementById('ul1')
+	var oBtn = document.getElementById('btn')
+	if()
+	var reg =/CNM|大爷/g;
+	oBtn.onclick = function(){
+		oLi = document.createElement('li')
+		oLi.innerHTML = oTxt.value.replace(reg,"*");
+		oUl.appendChild(oLi);
+		oTxt.value = '';
+	}
+	
+</script>
+</html>

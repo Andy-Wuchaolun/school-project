@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-012用new+工厂函数+全局函数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function sayHi(){
+		console.log('hi i am'+this.name)
+	}
+	function sayAge(){
+		console.log('i am '+this.age+'years old')
+	}
+
+	var createPerson = function(name,age){
+		// var obj = new Object();
+		this.name = name;
+		this.age = age;
+		this.sayHi = sayHi;
+		this.sayAge = sayAge;
+		// return obj;
+	}
+	var person1 = new createPerson('tom',18);
+	console.log(person1);
+	var person2 = new createPerson('leo',19);
+	console.log(person2);
+	console.log(person1.sayHi == person2.sayHi)
+</script>
+</html>

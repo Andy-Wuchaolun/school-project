@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-010new的作用.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var show = function(){
+		console.log(this)
+		this.name = 'Andy';
+		this.age = 18;
+		this.hobby = 'cook';
+		this.sort = function(){
+			console.log('aaaa....')
+		}
+	}
+	// window.show();
+	var obj = new show();
+	console.log(obj.name);
+	// console.log(show)
+</script>
+</html>

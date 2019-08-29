@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-004去重-根据对象的特点去重.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr =[11,88,66,22,11,44,22] 
+	function uniqueArrey(arr){
+		var result = [];
+		var obj = [];
+		for(var i = 0;i<arr.length;i++){
+			obj[arr[i]] = '';
+		}
+		for(attr in obj){
+			result.push(attr*1)
+		}
+		return result
+	}
+	console.log(uniqueArrey(arr))
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-29-001焦点图.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#box{
+
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	function Carousel(options){
+		this.oBox = document.getElementById(options.id);
+		this.aImage = options.aImage;
+		this.width = options.width;
+		this.height = options.height;
+		this.init();
+	}
+	Carousel.prototype.init = function(){
+		this.oBox.style.position = 'relative';
+		this.oBox.style.width = this.width +'px';
+		this.oBox.style.height = this.height +'px';
+		var oUlImage = document.createElement('ul')
+		for(var i = 0;i<this.Image.length;i++){
+			var oLi = document.createElement('li')
+			var aImage = document.createElement('img')
+			aImage.src = this.Image[i];
+			this.oLi.style.position = 'absolute';
+
+
+
+
+			oUlImage.appendChild(oLi)
+			oLi.appendChild(aImage)
+		}
+		this.oBox.appendChild(oUlImage);
+	}
+	
+	new Carousel({
+		id:'box',
+		aImage:['photo/carousel1.jpg','photo/carousel2.jpg','photo/carousel3.jpg'],
+		width:800,
+		height:400
+		}
+		);
+</script>
+</html>

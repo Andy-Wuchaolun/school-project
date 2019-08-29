@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-005JASON和js对象.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var obj = {
+		name:'Andy',
+		age : 18,
+		// hobby :'cook',
+		sayHi : function(){
+			console.log('hihihihi')
+		}
+	}
+	var json = '{"name":"Andy","age" : 18}';//报错的情况只有在js转json的时候才会报错
+	console.log(obj);
+	console.log(json);
+	var objTojson = JSON.stringify(obj);
+	console.log(objTojson)
+	var jsonToobj = JSON.parse(json);
+	console.log(jsonToobj)
+</script>
+</html>

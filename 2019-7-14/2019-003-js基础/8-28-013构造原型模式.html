@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-013构造原型模式.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// function sayHi(){
+	// 	console.log('hi i am'+this.name)
+	// }
+	// function sayAge(){
+	// 	console.log('i am '+this.age+'years old')
+	// }
+
+	var Person = function(name,age){
+		// var obj = new Object();
+		this.name = name;
+		this.age = age;
+		if(!this.sayHi){
+			Person.prototype.sayHi = function(){
+				console.log('hi i am'+this.name)
+			}
+		}
+		if(!this.sayAge){
+			Person.prototype.sayAge = function(){
+				console.log('i am '+this.age+'years old')
+			}
+		}
+	}
+	var person1 = new Person('tom',18);
+	console.log(person1);
+	var person2 = new Person('leo',19);
+	console.log(person2);
+	console.log(person1.sayHi == person2.sayHi)
+	console.log(person1.prototype)
+</script>
+</html>

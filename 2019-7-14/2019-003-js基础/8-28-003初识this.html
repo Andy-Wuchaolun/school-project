@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-28-003初识this.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var obj = {
+		name:'Andy',
+		age : 18,
+		// hobby :'cook',
+		sayHi : function(){
+			console.log(' hi i am ' + this.name + ' i am ' + this.age + ' years old')
+		}
+	}
+	obj.sayHi()//前面的obj
+</script>
+</html>
