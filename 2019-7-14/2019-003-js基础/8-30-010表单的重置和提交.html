@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-30-010表单的重置和提交.html</title>
+</head>
+<body>
+	<form action="https://www.kuazhu.com" id="form1"><div>
+		<input type="text" id="txt1" name="userName" value="tom">
+	</div>
+		<div>
+			<input type="password" id="txt2" name="pass">
+		</div>
+		<div>
+			<input type="radio" name="sex">男
+			<input type="radio" name="sex">女
+		</div>
+		<div>
+			<input type="submit" id="btn">
+			<input type="submit" value="提交input1">
+			<input type="image" src="photo/0.png">
+			<button type="submit">button</button>
+			<input type="reset" value="重置input">
+			<button type="reset">button重置</button>
+		</div>
+	</form>
+	<form action=""></form>
+</body>
+<script>
+	var oForm = document.forms[0];
+	
+	oForm.onsubmit = function(){
+		console.log('aaa...')
+		return false;//阻止默认行为
+	}
+	// oForm.submit();
+	oForm.onreset = function(){
+		console.log('bbbb')
+		// return false;
+	}
+	oForm.reset();
+</script>
+</html>

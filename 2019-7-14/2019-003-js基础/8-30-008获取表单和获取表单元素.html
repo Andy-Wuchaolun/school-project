@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-30-008获取表单和获取表单元素.html</title>
+</head>
+<body>
+	<form action="" id="form1">
+		<input type="text" id="txt1" name="userName">
+		<input type="password" id="txt2" name="pass">
+		<input type="radio" name="sex">男
+		<input type="radio" name="sex">女
+		<input type="submit" id="btn">
+	</form>
+	<form action=""></form>
+</body>
+<script>
+	oForm1 = document.forms[0];
+	console.log(oForm1)
+	/*
+	var oTxt = oForm1.elements[0];
+	console.log(oTxt);
+	*/
+	/*
+	var oTxt = oForm1.elements.userName;
+	console.log(oTxt);
+	*/
+	/*
+	var oTxt = oForm1.userName;
+	console.log(oTxt);
+	*/
+	/*
+	var oTxt = oForm1.elements["userName"];
+	console.log(oTxt);
+	*/
+	/*
+	var oForm = oForm1.userName.form;
+	console.log(oForm);
+	*/
+	/*
+	var oSex = oForm1.elements["sex"][0];
+	console.log(oSex);
+	*/
+</script>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-30-004前瞻.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str = 'ab a5 b8 c! df';
+	var reg1 =/[a-z](?=\d)/g;
+	var reg2 =/[a-z](?!\d)/g;
+	console.log(str.replace(reg1,"*"));
+	console.log(str.replace(reg2,"*"));
+</script>
+</html>
