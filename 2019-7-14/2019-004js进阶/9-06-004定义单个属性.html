@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-06-004定义单个属性.html</title>
+	<script>
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.sayName = function(){
+			console.log(this.name)
+		}
+		Person.prototype.sayAge = function(){
+			console.log(this.age)
+		}
+		Person.prototype.EYES = 2;
+		var p1 = new Person('tom',18)
+		Object.defineProperty(p1,'LEGS',{
+			value : 2,
+			enumerable:true,
+			writable:true,
+			configurable:true
+		})
+		Object.defineProperty(p1,'LEGS',{
+			value : 2,
+			enumerable:true,
+			writable:true,
+		})
+		p1.LEGS = 4;
+		delete p1.LEGS;
+		console.log(p1);
+		console.log(p1.LEGS);
+		for(var attr in p1){
+			console.log(attr,p1[attr])
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

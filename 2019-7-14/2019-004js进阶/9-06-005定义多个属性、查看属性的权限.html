@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-06-005定义多个属性、查看属性的权限.html</title>
+	<script>
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.sayName = function(){
+			console.log(this.name)
+		}
+		Person.prototype.sayAge = function(){
+			console.log(this.age)
+		}
+		Person.prototype.EYES = 2;
+		var p1 = new Person('tom',18)
+		//定义多个属性
+		Object.defineProperties(p1,{
+			'LEGS':{value:2},
+			'mouth':{value:1}
+			})
+		console.log(p1)
+		for(var attr in p1){
+			console.log(attr,p1[attr])
+		}
+		//查看属性的权限
+		var result = Object.getOwnPropertyDescriptor(p1,'LEGS')
+		console.log(result);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

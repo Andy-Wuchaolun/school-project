@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-06-003属性的判断.html</title>
+	<script>
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.sayName = function(){
+			console.log(this.name)
+		}
+		Person.prototype.sayAge = function(){
+			console.log(this.age)
+		}
+		Person.prototype.EYES = 2;
+		var p1 = new Person('tom',18)
+		console.log(p1.hasOwnProperty('name'));
+		console.log(p1.hasOwnProperty('LEGS'));
+		console.log("EYES" in p1);
+		console.log('name' in p1);
+		function hasOwnPropertytype(attr,obj){
+			return !obj.hasOwnProperty(attr) && attr in obj;
+		}
+		console.log(hasOwnPropertytype('EYES',p1));
+		console.log(hasOwnPropertytype('name',p1));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

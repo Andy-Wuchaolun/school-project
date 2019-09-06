@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-06-002访问、添加、删除.html</title>
+	<script>
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.sayName = function(){
+			console.log(this.name)
+		}
+		Person.prototype.sayAge = function(){
+			console.log(this.age)
+		}
+		Person.prototype.EYES = 2;
+		delete p1.prototype.name ;
+		var p1 = new Person('tom',18)
+		/*属性的添加
+		console.log('p1',p1)
+		console.log(p1.EYES);
+		p1.EYES = 4;
+		console.log(p1.EYES)
+		p1.name = 'leo';
+		console.log(p1.name)
+		console.log(p1);
+		*/
+		console.log(delete p1.name);//返回true
+		console.log(delete p1.hobby);//返回true，如果有删除返回真，若没有，直接返回真
+		console.log(p1)
+		p1.name ='leo';
+		console.log(p1.name);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
