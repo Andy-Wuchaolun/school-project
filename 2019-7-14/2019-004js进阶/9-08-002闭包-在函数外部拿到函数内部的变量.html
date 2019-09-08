@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-08-002闭包-在函数外部拿到函数内部的变量.html</title>
+	<script>
+		function fn(){
+			var n = 1;
+			add = function(){
+				n++;
+			}
+			return function fn1(){
+				console.log(n)
+			}
+		}
+		/*
+		fn()();
+		*/
+		var result = fn();
+		result();
+		add();
+		result();
+		add();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

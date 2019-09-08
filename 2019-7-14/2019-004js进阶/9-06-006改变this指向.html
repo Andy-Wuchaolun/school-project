@@ -5,17 +5,23 @@
 	<title>9-06-006改变this指向.html</title>
 	<script>
 		function person(n1,n2){
+			// console.log(this,n1,n2)
 			console.log(this,n1,n2)
 		}
-		person();
+		// person(1,2);
+		// console.log(this)
+
 		/*
 		person.call({name:'leo'},1,2);
-		person.apply({},[1],2);
+		person.apply({},[1],2); 
 		person.apply({},[1,2]);
 		*/
+		/*
 		var result = person.bind({name:'tom'});
 		// console.log(result)
 		result(1,2)
+		*/
+
 	</script>
 </head>
 <body>
