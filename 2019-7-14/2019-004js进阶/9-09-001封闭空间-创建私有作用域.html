@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9-09-001封闭空间-创建私有作用域.html</title>
+	<script>
+		/*
+		var a= 1;
+		var a = 2;
+		console.log(a)
+		*/
+		var a = 0; 
+		(function(){
+			var a = 1;
+			console.log(a)
+		})();
+		(function(){
+			var a = 2;
+			console.log(a)
+		})();
+		console.log(a)//全局和局部有区别，和封装函数很相似
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
