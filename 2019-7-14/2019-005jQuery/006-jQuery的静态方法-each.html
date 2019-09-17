@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>006-jQuery的静态方法-each.html</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	/*
+	var arr =[0,5,9,3,6]
+	arr.forEach(function(value,index){
+		console.log(value,index)
+	})
+	$.each(arr,function(index,value){
+		console.log(index,value)
+	})
+	*/
+	var LikeArr = {0:'aaa',1:'bbb',2:'ccc',length:3}
+	// console.log(LikeArr)
+	/*访问不到，不能访问伪数组
+	LikeArr.forEach(function(value,index){
+		console.log(value,index)
+	})
+	*/
+	$.each(LikeArr,function(index,value){
+		console.log(index,value)
+	})
+</script>
+</html>

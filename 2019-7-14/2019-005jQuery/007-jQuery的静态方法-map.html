@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>007-jQuery的静态方法-map.html</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	
+	var arr =[0,5,9,3,6]
+	/*
+	var res = arr.map(function(value,index){
+		console.log(value,index)
+		return value
+	})
+	console.log(res)
+	*/
+	/*
+	var res = $.map(arr,function(value,index){
+		console.log(value,index)
+		return value*10
+	})
+	console.log(res)
+	*/
+	var LikeArr = {0:'aaa',1:'bbb',2:'ccc',length:3}
+	// console.log(LikeArr)
+	/*
+	var res = LikeArr.map(function(value,index){
+		console.log(value,index)
+	})
+	console.log(res)
+	*/
+	
+	var res = $.map(LikeArr,function(value,index){
+		console.log(value,index)
+		return value
+	})
+	console.log(res)
+</script>
+</html>

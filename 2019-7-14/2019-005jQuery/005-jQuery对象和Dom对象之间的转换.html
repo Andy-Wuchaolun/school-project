@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>005-jQuery对象和Dom对象之间的转换.html</title>
+</head>
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	var aDiv = document.getElementsByTagName('div');
+	console.log(aDiv)
+	//jQuery转换Dom
+	console.log($(aDiv)[0])
+	console.log($(aDiv).get(2))
+	//Dom转换jQuery
+	/*
+	$(aDiv).css({
+		background:'red'
+	})
+	*/
+	
+	console.log($('div').css({
+		background:'red'
+	}))
+</script>
+</html>
