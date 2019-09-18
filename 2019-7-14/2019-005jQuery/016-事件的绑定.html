@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>016-事件的绑定.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 400px;
+			height: 400px;
+			border: 1px solid #000;
+			/*margin: 100px auto;*/
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	$(function(){
+		//方法一
+		/*
+		$('div').click(function(){
+			alert('click')
+		})
+		$('div').mouseover(function(){
+			alert('mouseover')
+		})
+		*/
+		//方法二
+		/*
+		function shoow(){
+			alert('shoow')
+		}
+		$('div').on('click',function(){
+			alert('click')
+		})
+		$('div').on('click',shoow)
+		$('div').on('mouseover',function(){
+			alert('mouseover')
+		})
+		$('div').on('mouseout',function(){
+			alert('mouseout')
+		})
+		*/
+		/*
+		$('div').one('click',function(){
+			alert('click')
+		})
+		*/
+		//hover事件
+		/*
+		$('div').hover(function(){
+			alert('hover')
+		})
+		*/
+	})
+</script>
+</html>

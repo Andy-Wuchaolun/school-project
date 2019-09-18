@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-属性操作.html</title>
+</head>
+<body>
+	<input type="text" name="123">
+	<input type="text">
+	<input type="radio">
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	//获取
+	// console.log($('input').eq(0).attr("name"))
+	console.log($('input').eq(0).prop("name"))
+	//设置
+	console.log($('input').eq(0).attr("name"))
+	
+
+	$('input').eq(0).removeAttr('name')
+</script>
+</html>
