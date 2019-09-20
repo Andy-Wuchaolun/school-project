@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>032-添加节点.html</title>
+</head>
+<body>
+	<button>插入</button>
+	<ul>
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+	</ul>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	//内部插入
+	/*
+	$(function(){
+		$('button').on('click',function(){
+			
+			var oLi = $('<li>我是插入的</li>')
+			$('ul').append(oLi)
+			
+			var oLi = $('<li>我是插入的</li>')
+			oLi.appendTo($('ul'))
+		})
+		
+	})
+	*/
+	//外部插入
+	$(function(){
+		$('button').on('click',function(){
+			/*
+			var oP = $('<p>我是插入的</p>')
+			$('ul').after(oP)
+			*/
+			
+			var oP = $('<p>我是插入的</p>')
+			$('ul').before(oP)
+			
+		})
+		
+	})
+</script>
+</html>

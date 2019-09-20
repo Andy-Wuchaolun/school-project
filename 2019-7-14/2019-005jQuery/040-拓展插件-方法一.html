@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>040-拓展插件-方法一.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<button>变化</button>
+	<div></div>
+	<div></div>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	$.prototype.setColor = function(options){
+		var defaults = {background:'red'}
+		console.log(this)
+	}
+</script>
+<script>
+	$(function(){
+		$('button').on('click',function(){
+			$('div').setColor({
+				background:'red'
+			}).animate({width:300})
+		})
+	})
+</script>
+</html>

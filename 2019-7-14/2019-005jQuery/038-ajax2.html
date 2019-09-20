@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-ajax2.html</title>
+</head>
+<body>
+	<button>传输</button>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+	$(function(){
+		$('button').on('click',function(){
+			$.get('037-data.json',function(data,status,jqXHR){
+				console.log(data)
+				console.log(status)
+				console.log(jqXHR)
+			},'jason')
+		})
+	})
+</script>
+</html>
