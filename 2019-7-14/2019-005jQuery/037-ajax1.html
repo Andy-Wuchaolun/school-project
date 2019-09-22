@@ -22,8 +22,9 @@
     headers:{test:'test'}//设置请求头
     */
 	$.ajax({
-		url:'037-data.json'
-
+		url:'037-data.json',
+		type:'GET',
+		data:{name:'Tom',age:18},
 	})
 </script>
 </html>
